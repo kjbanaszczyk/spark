@@ -234,7 +234,7 @@ object DecimalLiteral {
 case class Literal (value: Any, dataType: DataType) extends LeafExpression {
 
   override def foldable: Boolean = true
-  override def nullable: Boolean = value == null
+  override def nullable: Boolean = true
 
   override def toString: String = value match {
     case null => "null"
